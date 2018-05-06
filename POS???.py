@@ -10,48 +10,30 @@ from sklearn.feature_extraction.text import TfidfTransformer
 import nltk
 from nltk import word_tokenize          
 from nltk.stem import WordNetLemmatizer 
-import time
 
-print("pos")
 
-class LemmaTokenizer(object):
-    def __init__(self):
-        self.wnl = WordNetLemmatizer()
+class POSTokenizer(object):
     def __call__(self, doc):
         text = word_tokenize(doc)
         return nltk.pos_tag(text)
      
-
-start = time.time()
-
 train = pd.read_csv("topic.csv", header=0, delimiter=",")
-# print(train.shape)
-# print(train.columns.values)
-# print(train['annotation'])
 
 target = train['annotation']
 
-# print(train)
 vectorizer = CountVectorizer(analyzer = "word",
-                             tokenizer = LemmaTokenizer(),
+                             tokenizer = POSTokenizer(),
                              preprocessor = None,
                              stop_words = None,
                              
                              )
 train_data_features = vectorizer.fit_transform(train['body']).toarray()
 
-# print(type(vectorizer.fit_transform(train['body'])))
-# print(train_data_features)
 
 vocab = vectorizer.get_feature_names()
 
-# print(vocab)
-# print(vectorizer.vocabulary_.get('\n'))
-
+# CROSS VALIDATION
 cv = ShuffleSplit(n_splits=10, test_size=0.1, random_state=0)
-
-# print(cv.get_n_splits(train_data_features))
-
 
 lr = LogisticRegression(C=1,
                         penalty='l2',
@@ -67,13 +49,30 @@ for train_index, test_index in splited:
     traintarget.append(target[train_index])
     testdata.append(train_data_features[test_index])
     testtarget.append(target[test_index])
-    # traindata = train_data_features[train_index]
-    # traintarget = target[train_index]
-    # testdata = train_data_features[test_index]
-    # testtarget = target[test_index]
 
 lr.fit(traindata[0], traintarget[0]) 
 result = lr.predict(testdata[0])
+
+import numpy as np
+coefs=lr.coef_
+ddd = []
+for i in target:
+    if i not in ddd:
+        ddd.append(i)
+ddd_count = 0
+for coe in coefs:
+    print(ddd[ddd_count],end='|')
+    ddd_count += 1
+    top_three = np.argpartition(coe, -3)[-3:]
+    last_three = np.argpartition(coe, 3)[:3]
+    
+    for i in top_three:
+        print("'"+str(vocab[i]),end="'")
+    print(" |", end='')
+    for i in last_three:
+        print("'"+str(vocab[i]),end="'")
+    print()    
+print()
 
 
 dic = {}
@@ -106,37 +105,11 @@ for k in dic:
         f1 = 2*pre*rec/(pre+rec)
         print(k + " precision:%0.2f, recall:%0.2f, f1_score:%0.2f"%(pre,rec,f1))
 
-# print("to copy!")
-# for k in dic:
-#     if k not in dicpredict:
-#         print(k+"|0|0|0|")
-#     elif k not in dicintersect:
-#         print(k+"|0|0|0|")
-#     else:
-#         pre = dicintersect[k]/dicpredict[k]
-#         rec = dicintersect[k]/dic[k]
-#         f1 = 2*pre*rec/(pre+rec)
-#         print(k + "|%0.2f|%0.2f|%0.2f|"%(pre,rec,f1))
-# print("copied!")
-
-
+del dic
+del dicpredict
+del dicintersect
 accuracy_score = cross_val_score(lr, train_data_features, target, cv=cv)
 precision = cross_val_score(lr, train_data_features, target, cv=cv,scoring='precision_macro')
 recall_scores = cross_val_score(lr, train_data_features, target, cv=cv,scoring='recall_macro')
 f1_scores = cross_val_score(lr, train_data_features, target, cv=cv,scoring='f1_macro')
-
-
-
 print("Accuracy: %0.5f, precision: %0.5f, recall: %0.5f, f1: %0.5f" % (accuracy_score.mean(), precision.mean(), recall_scores.mean(), f1_scores.mean()))
-
-
-# scores = cross_val_score(lr, train_data_features, target, cv=cv)
-
-# end = time.time()
-# print(end - start)
-
-# print("Accuracy_Baseline: %0.5f (+/- %0.5f)" % (scores.mean(), scores.std() * 2))
-
-
-
-
