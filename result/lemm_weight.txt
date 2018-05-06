@@ -1,0 +1,12 @@
+lemmatise words
+Business|'business''sale''market' |'his''facebook''cm'
+Entertainment|'night''actor''show' |'police''company''your'
+Error|'setting''log''cuomo' |'which''also''by'
+Health|'cancer''ebola''health' |'on''like''police'
+Other|'university''what''pope' |'her''their''about'
+Politics|'election''president''minister' |'university''police''post'
+Science and Technology|'science''internet''technology' |'not''twitter''president'
+Society|'girl''pay''police' |'star''game''show'
+Sports|'league''game''team' |'year''actor''show'
+War|'syria''troop''force' |'with''like''new'
+

@@ -20,7 +20,7 @@ vectorizer = CountVectorizer(analyzer = "word",
                              )
 train_data_features = vectorizer.fit_transform(train['body']).toarray()
 # print(train_data_features)
-#vocab = vectorizer.get_feature_names()
+vocab = vectorizer.get_feature_names()
 # print(vocab)
 cv = ShuffleSplit(n_splits=10, test_size=0.1, random_state=0)
 lr = LogisticRegression(C=1,
@@ -44,35 +44,75 @@ for train_index, test_index in splited:
 lr.fit(traindata[0], traintarget[0]) 
 result = lr.predict(testdata[0])
 
-dic = {}
-for t in testtarget[0]:
-    if t not in dic:
-        dic[t] = 0
-    dic[t] += 1
 
-dicpredict = {}
-for t in result:
-    if t not in dicpredict:
-        dicpredict[t] = 0
-    dicpredict[t] += 1
+# coefs=lr.coef_
+# for coe in coefs:
+    
+#     top_three = np.argpartition(coe, -3)[-3:]
+#     for i in top_three:
+#         print(vocab[i],end=' ')
+#     print()
+# print()
+# ddd = []
+# for i in target:
+#     if i not in ddd:
+#         ddd.append(i)
 
-dicintersect = {}
-for r in range(0,len(result)):
-    if testtarget[0].tolist()[r] == result[r]:
-        if result[r] not in dicintersect:
-            dicintersect[result[r]] = 0
-        dicintersect[result[r]] += 1
+# print(ddd)
 
-for k in dic:
-	if k not in dicpredict:
-		print(k+" precision:0, recall:0, f1_score:0")
-	if k not in dicintersect:
-		print(k+" precision:0, recall:0, f1_score:0")
-	else:
-		pre = dicintersect[k]/dicpredict[k]
-		rec = dicintersect[k]/dic[k]
-		f1 = 2*pre*rec/(pre+rec)
-		print(k + " precision:%0.2f, recall:%0.2f, f1_score:%0.2f"%(pre,rec,f1))
+import numpy as np
+coefs=lr.coef_
+ddd = []
+for i in target:
+    if i not in ddd:
+        ddd.append(i)
+ddd_count = 0
+for coe in coefs:
+    print(ddd[ddd_count],end='|')
+    ddd_count += 1
+    top_three = np.argpartition(coe, -3)[-3:]
+    last_three = np.argpartition(coe, 3)[:3]
+    
+    for i in top_three:
+        print("'"+vocab[i],end="'")
+    print(" |", end='')
+    for i in last_three:
+        print("'"+vocab[i],end="'")
+    print()    
+print()
+
+
+# dic = {}
+# for t in testtarget[0]:
+#     if t not in dic:
+#         dic[t] = 0
+#     dic[t] += 1
+
+# dicpredict = {}
+# for t in result:
+#     if t not in dicpredict:
+#         dicpredict[t] = 0
+#     dicpredict[t] += 1
+
+# dicintersect = {}
+# for r in range(0,len(result)):
+#     if testtarget[0].tolist()[r] == result[r]:
+#         if result[r] not in dicintersect:
+#             dicintersect[result[r]] = 0
+#         dicintersect[result[r]] += 1
+
+# for k in dic:
+# 	if k not in dicpredict:
+# 		print(k+" precision:0, recall:0, f1_score:0")
+# 	if k not in dicintersect:
+# 		print(k+" precision:0, recall:0, f1_score:0")
+# 	else:
+# 		pre = dicintersect[k]/dicpredict[k]
+# 		rec = dicintersect[k]/dic[k]
+# 		f1 = 2*pre*rec/(pre+rec)
+# 		print(k + " precision:%0.2f, recall:%0.2f, f1_score:%0.2f"%(pre,rec,f1))
+
+
 
 # print("to copy!")
 # for k in dic:
@@ -88,14 +128,23 @@ for k in dic:
 # print("copied!")
 
 
-accuracy_score = cross_val_score(lr, train_data_features, target, cv=cv,scoring='accuracy')
-precision = cross_val_score(lr, train_data_features, target, cv=cv, scoring='precision_macro')
-recall_scores = cross_val_score(lr, train_data_features, target, cv=cv, scoring='recall_macro')
-f1_scores = cross_val_score(lr, train_data_features, target, cv=cv, scoring='f1_macro')
 
 
 
-print("Accuracy: %0.5f, precision: %0.5f, recall: %0.5f, f1: %0.5f" % (accuracy_score.mean(), precision.mean(), recall_scores.mean(), f1_scores.mean()))
+# accuracy_score = cross_val_score(lr, train_data_features, target, cv=cv,scoring='accuracy')
+# precision = cross_val_score(lr, train_data_features, target, cv=cv, scoring='precision_macro')
+# recall_scores = cross_val_score(lr, train_data_features, target, cv=cv, scoring='recall_macro')
+# f1_scores = cross_val_score(lr, train_data_features, target, cv=cv, scoring='f1_macro')
+
+
+
+# print("Accuracy: %0.5f, precision: %0.5f, recall: %0.5f, f1: %0.5f" % (accuracy_score.mean(), precision.mean(), recall_scores.mean(), f1_scores.mean()))
+
+
+
+
+
+
 
 # Accuracy: 0.68079, precision: 0.57176, recall: 0.50854, f1: 0.52122
 

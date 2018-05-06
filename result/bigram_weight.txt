@@ -1,0 +1,13 @@
+bigram
+to copy!
+Business|'20 saturday''phone has''the company' |'year old''on saturday''he was'
+Entertainment|'with her''the show''the film' |'the company''said the''according to'
+Error|'your video''update your''please log' |'at the''in the''to the'
+Health|'the disease''the virus''the hospital' |'on the''in the''to the'
+Other|'the city''kay lee''the pope' |'on the''in the''of the'
+Politics|'the government''the president''prime minister' |'year old''the company''if you'
+Science and Technology|'phone turned''the internet''20 on' |'year old''at the''on the'
+Society|'the incident''said the''the police' |'the show''prime minister''the film'
+Sports|'to play''the team''the game' |'said the''more than''by the'
+War|'in iraq''in syria''islamic state' |'at the''has been''to the'
+

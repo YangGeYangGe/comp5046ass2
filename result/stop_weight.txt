@@ -1,0 +1,12 @@
+stopwords
+Business|'industry''business''market' |'old''facebook''police'
+Entertainment|'tv''actor''film' |'attack''police''team'
+Error|'settings''cuomo''log' |'year''new''2014'
+Health|'drug''ebola''cancer' |'police''like''million'
+Other|'dreamliner''pope''degrees' |'police''year''old'
+Politics|'party''president''minister' |'old''police''doctors'
+Science and Technology|'science''internet''technology' |'twitter''police''president'
+Society|'pay''police''weather' |'star''film''actor'
+Sports|'game''team''games' |'years''like''company'
+War|'forces''syria''troops' |'like''just''new'
+

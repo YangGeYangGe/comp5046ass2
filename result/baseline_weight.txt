@@ -1,0 +1,11 @@
+Business|'business''market''its' |'old''his''our'
+Entertainment|'actor''show''film' |'police''against''said'
+Error|'settings''cuomo''log' |'which''year''2014'
+Health|'cancer''health''ebola' |'like''police''on'
+Other|'your''degrees''pope' |'her''their''they'
+Politics|'party''minister''president' |'old''police''university'
+Science and Technology|'science''technology''internet' |'not''twitter''president'
+Society|'weather''pay''police' |'show''star''film'
+Sports|'team''game''games' |'mr''show''by'
+War|'islamic''syria''troops' |'with''like''up'
+

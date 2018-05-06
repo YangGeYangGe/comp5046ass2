@@ -1,0 +1,12 @@
+pos
+Business|'('business', 'NN')''('market', 'NN')''('its', 'PRP$')' |'('his', 'PRP$')''('her', 'PRP$')''('free', 'JJ')'
+Entertainment|'('music', 'NN')''('film', 'NN')''('show', 'NN')' |'('against', 'IN')''('said', 'VBD')''('your', 'PRP$')'
+Error|'('photo', 'NN')''('log', 'NN')''('cuomo', 'NN')' |'('year', 'NN')''('also', 'RB')''('which', 'WDT')'
+Health|'('cancer', 'NN')''('ebola', 'NN')''('health', 'NN')' |'("'s", 'POS')''('like', 'IN')''('on', 'IN')'
+Other|'('your', 'PRP$')''('pope', 'NN')''('what', 'WP')' |'('in', 'IN')''('their', 'PRP$')''('her', 'PRP$')'
+Politics|'('party', 'NN')''('minister', 'NN')''('president', 'NN')' |'('police', 'NN')''('islamic', 'JJ')''('university', 'NN')'
+Science and Technology|'('science', 'NN')''('internet', 'NN')''('technology', 'NN')' |'('president', 'NN')''('twitter', 'NN')''('not', 'RB')'
+Society|'('weather', 'NN')''('day', 'NN')''('police', 'NN')' |'('show', 'NN')''('star', 'NN')''('film', 'NN')'
+Sports|'('team', 'NN')''('games', 'NNS')''('game', 'NN')' |'('show', 'NN')''('minister', 'NN')''('actor', 'NN')'
+War|'('forces', 'NNS')''('islamic', 'JJ')''('troops', 'NNS')' |'('with', 'IN')''('like', 'IN')''('new', 'JJ')'
+
