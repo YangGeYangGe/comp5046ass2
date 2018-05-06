@@ -1,0 +1,8 @@
+lemmatise words
+high precision:0.70, recall:0.57, f1_score:0.63
+low precision:0.57, recall:0.70, f1_score:0.63
+to copy!
+high|0.70|0.57|0.63|
+low|0.57|0.70|0.63|
+copied!
+Accuracy: 0.58559, precision: 0.58344, recall: 0.58278, f1: 0.58079

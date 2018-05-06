@@ -1,0 +1,8 @@
+stopwords
+high precision:0.65, recall:0.52, f1_score:0.58
+low precision:0.53, recall:0.66, f1_score:0.59
+to copy!
+high|0.65|0.52|0.58|
+low|0.53|0.66|0.59|
+copied!
+Accuracy: 0.57817, precision: 0.57557, recall: 0.57557, f1: 0.57385

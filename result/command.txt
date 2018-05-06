@@ -1,0 +1,13 @@
+python3 baseline.py > result/topicbaseline.txt; 
+python3 bigram.py >result/topicbigram.txt; 
+python3 lem-\ matise\ words.py > result/topiclem.txt; 
+python3 POS\?\?\?.py > result/topicpos.txt; 
+python3 stopwords.py > result/topicstop.txt; 
+python3 tfidf.py > result/topictf.txt; 
+
+python3 baseline的副本.py >result/vbase.txt; 
+python3 bigram的副本.py > result/vbi.txt; 
+python3 POS\?\?\?的副本.py > result/vPOS.txt; 
+python3 stopwords的副本.py > result/vstop.txt; 
+python3 tfidf的副本.py >result/vtf.txt;
+python3 lem-\ matise\ words的副本.py >result/vle.txt

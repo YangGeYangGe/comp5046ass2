@@ -1,0 +1,24 @@
+stopwords
+Entertainment precision:0.76, recall:0.72, f1_score:0.74
+Politics precision:0.77, recall:0.65, f1_score:0.70
+Sports precision:0.88, recall:0.92, f1_score:0.90
+Business precision:0.92, recall:0.50, f1_score:0.65
+Other precision:0, recall:0, f1_score:0
+Society precision:0.60, recall:0.86, f1_score:0.71
+War precision:0.67, recall:0.67, f1_score:0.67
+Health precision:0.75, recall:0.23, f1_score:0.35
+Error precision:0, recall:0, f1_score:0
+Science and Technology precision:0.36, recall:0.83, f1_score:0.50
+to copy!
+Entertainment|0.76|0.72|0.74|
+Politics|0.77|0.65|0.70|
+Sports|0.88|0.92|0.90|
+Business|0.92|0.50|0.65|
+Other|0|0|0|
+Society|0.60|0.86|0.71|
+War|0.67|0.67|0.67|
+Health|0.75|0.23|0.35|
+Error|0|0|0|
+Science and Technology|0.36|0.83|0.50|
+copied!
+Accuracy: 0.68253, precision: 0.56336, recall: 0.50579, f1: 0.51685

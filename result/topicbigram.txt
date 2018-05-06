@@ -1,0 +1,25 @@
+bigram
+to copy!
+Entertainment precision:0.71, recall:0.75, f1_score:0.73
+Politics precision:0.69, recall:0.58, f1_score:0.63
+Sports precision:0.87, recall:0.87, f1_score:0.87
+Business precision:0.77, recall:0.45, f1_score:0.57
+Other precision:0, recall:0, f1_score:0
+Society precision:0.50, recall:0.81, f1_score:0.62
+War precision:0, recall:0, f1_score:0
+Health precision:0, recall:0, f1_score:0
+Error precision:0, recall:0, f1_score:0
+Science and Technology precision:0.33, recall:0.17, f1_score:0.22
+to copy!
+Entertainment|0.71|0.75|0.73|
+Politics|0.69|0.58|0.63|
+Sports|0.87|0.87|0.87|
+Business|0.77|0.45|0.57|
+Other|0|0|0|
+Society|0.50|0.81|0.62|
+War|0|0|0|
+Health|0|0|0|
+Error|0|0|0|
+Science and Technology|0.33|0.17|0.22|
+copied!
+Accuracy: 0.61965, precision: 0.45913, recall: 0.38627, f1: 0.39580

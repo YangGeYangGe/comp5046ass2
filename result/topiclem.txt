@@ -1,0 +1,24 @@
+lemmatise words
+Entertainment precision:0.77, recall:0.75, f1_score:0.76
+Politics precision:0.69, recall:0.65, f1_score:0.67
+Sports precision:0.87, recall:0.89, f1_score:0.88
+Business precision:0.78, recall:0.64, f1_score:0.70
+Other precision:0, recall:0, f1_score:0
+Society precision:0.59, recall:0.80, f1_score:0.68
+War precision:0.50, recall:0.67, f1_score:0.57
+Health precision:1.00, recall:0.15, f1_score:0.27
+Error precision:0, recall:0, f1_score:0
+Science and Technology precision:0.25, recall:0.50, f1_score:0.33
+to copy!
+Entertainment|0.77|0.75|0.76|
+Politics|0.69|0.65|0.67|
+Sports|0.87|0.89|0.88|
+Business|0.78|0.64|0.70|
+Other|0|0|0|
+Society|0.59|0.80|0.68|
+War|0.50|0.67|0.57|
+Health|1.00|0.15|0.27|
+Error|0|0|0|
+Science and Technology|0.25|0.50|0.33|
+copied!
+Accuracy: 0.67511, precision: 0.56053, recall: 0.49798, f1: 0.51215

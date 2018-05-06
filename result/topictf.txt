@@ -1,0 +1,24 @@
+tfidf
+Entertainment precision:0.76, recall:0.62, f1_score:0.68
+Politics precision:0.74, recall:0.65, f1_score:0.69
+Sports precision:0.89, recall:0.82, f1_score:0.85
+Business precision:0.91, recall:0.45, f1_score:0.61
+Other precision:0, recall:0, f1_score:0
+Society precision:0.47, recall:0.89, f1_score:0.61
+War precision:0, recall:0, f1_score:0
+Health precision:0, recall:0, f1_score:0
+Error precision:0, recall:0, f1_score:0
+Science and Technology precision:1.00, recall:0.17, f1_score:0.29
+to copy!
+Entertainment|0.76|0.62|0.68|
+Politics|0.74|0.65|0.69|
+Sports|0.89|0.82|0.85|
+Business|0.91|0.45|0.61|
+Other|0|0|0|
+Society|0.47|0.89|0.61|
+War|0|0|0|
+Health|0|0|0|
+Error|0|0|0|
+Science and Technology|1.00|0.17|0.29|
+copied!
+Accuracy: 0.58996, precision: 0.35777, recall: 0.32656, f1: 0.32318

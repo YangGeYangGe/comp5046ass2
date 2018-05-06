@@ -1,0 +1,9 @@
+bigram
+to copy!
+high precision:0.68, recall:0.72, f1_score:0.70
+low precision:0.63, recall:0.58, f1_score:0.61
+to copy!
+high|0.68|0.72|0.70|
+low|0.63|0.58|0.61|
+copied!
+Accuracy: 0.60961, precision: 0.60684, recall: 0.60423, f1: 0.60213

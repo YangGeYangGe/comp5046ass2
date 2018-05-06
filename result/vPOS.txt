@@ -1,0 +1,8 @@
+pos
+high precision:0.71, recall:0.63, f1_score:0.67
+low precision:0.60, recall:0.69, f1_score:0.64
+to copy!
+high|0.71|0.63|0.67|
+low|0.60|0.69|0.64|
+copied!
+Accuracy: 0.59956, precision: 0.59712, recall: 0.59671, f1: 0.59519

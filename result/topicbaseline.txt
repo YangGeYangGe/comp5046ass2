@@ -1,0 +1,27 @@
+Entertainment precision:0.71, recall:0.75, f1_score:0.73
+Politics precision:0.75, recall:0.58, f1_score:0.65
+Sports precision:0.85, recall:0.89, f1_score:0.87
+Business precision:0.76, recall:0.59, f1_score:0.67
+Other precision:0, recall:0, f1_score:0
+Other precision:0, recall:0, f1_score:0
+Society precision:0.58, recall:0.81, f1_score:0.68
+War precision:0.50, recall:0.67, f1_score:0.57
+Health precision:1.00, recall:0.23, f1_score:0.38
+Error precision:0, recall:0, f1_score:0
+Error precision:0, recall:0, f1_score:0
+Science and Technology precision:0.33, recall:0.50, f1_score:0.40
+to copy!
+Entertainment|0.71|0.75|0.73|
+Politics|0.75|0.58|0.65|
+Sports|0.85|0.89|0.87|
+Business|0.76|0.59|0.67|
+Other|0|0|0|
+Other|0|0|0|
+Society|0.58|0.81|0.68|
+War|0.50|0.67|0.57|
+Health|1.00|0.23|0.38|
+Error|0|0|0|
+Error|0|0|0|
+Science and Technology|0.33|0.50|0.40|
+copied!
+Accuracy: 0.68079, precision: 0.57176, recall: 0.50854, f1: 0.52122
